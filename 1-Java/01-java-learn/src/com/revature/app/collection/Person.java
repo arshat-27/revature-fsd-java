@@ -3,12 +3,30 @@ package com.revature.app.collection;
 public class Person implements Comparable<Person> {
 	private String name;
 	private int age;
+	private long id;
 	
 	public Person(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
 	}
+	
+	
+
+	public Person(long id, String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.id = id;
+	}
+	
+	
+	
+	public long getId() {
+		return id;
+	}
+
+
 
 	public String getName() {
 		return name;
@@ -18,23 +36,28 @@ public class Person implements Comparable<Person> {
 		return age;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + "]";
+		return "Person [id=" + id + ", name= " + name + ", age=" + age + "]";
 	}
+
+
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + age;
+		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
 
+
+
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Person.equals() called");
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -44,6 +67,8 @@ public class Person implements Comparable<Person> {
 		Person other = (Person) obj;
 		if (age != other.age)
 			return false;
+		if (id != other.id)
+			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -51,6 +76,8 @@ public class Person implements Comparable<Person> {
 			return false;
 		return true;
 	}
+
+
 
 	@Override
 	public int compareTo(Person person) {

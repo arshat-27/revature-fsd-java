@@ -3,25 +3,20 @@ public class LinePrinter {
 
 	public static void main(String[] args) {
 		printLine();
-		printLine2();
+		printLine(15);
 		printLine(30);
-		printLine(50);
-		
+
 	}
+	
 	public static void printLine() {
-		System.out.println("-----------------------------");
+		System.out.println("------------------------------");
 	}
-	public static void printLine2() {
-		System.out.println("8888888888888888888888888888");
-	}
-	//Method Overloading Polymorphism
-	public static void printLine(int noc) {
-		for (int i=0;i<noc;i++) {
+	
+	public static void printLine(int numberOfCharacters) {
+		for (int i = 0; i < numberOfCharacters; i++) {
 			System.out.print("-");
-			
 		}
 		System.out.println();
 	}
-	
-}
 
+}
