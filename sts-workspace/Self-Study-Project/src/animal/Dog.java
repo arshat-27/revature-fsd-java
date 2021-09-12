@@ -40,7 +40,7 @@ public class Dog extends Animal {
 		chew();
 		super.eat();
 	}
-	public
+	                      
 	
 
 }
