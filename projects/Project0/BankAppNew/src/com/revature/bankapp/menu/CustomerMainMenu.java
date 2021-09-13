@@ -20,9 +20,10 @@ public class CustomerMainMenu extends Menu {
 		Scanner scanner = new Scanner(System.in);
 		switch(selection) {
 		case 1:
-			ViewAccount ViewAccount = new ViewAccount("View Account");
-			ViewAccount.displayAccounts();
+			ViewAccount.accountList();
+			displayMenuAndCaptureSelection();
 			break;
+			
 			
 			
 		case 2:

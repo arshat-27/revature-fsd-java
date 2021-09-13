@@ -1,7 +1,7 @@
 package com.revature.bankapp.account;
 
 public class Account {
-		protected String accountNumber;
+		protected static String accountNumber;
 		protected double balance;
 		
 		public Account(String accountNumber,double balance) {
@@ -9,7 +9,7 @@ public class Account {
 			this.balance = balance;
 			
 		}
-		public String getAccountNumber() {
+		public static String getAccountNumber() {
 			return accountNumber;
 		}
 		public double getBalance() {

@@ -7,7 +7,7 @@ import com.revature.bankapp.account.Account;
 
 public class DataManager {
 	private static List<Customer> customerList = new ArrayList<>();
-	private static List<Account> accountList = new ArrayList<>();
+	public static List<Account> accountList = new ArrayList<>();
 	
 	static {
 		customerList.add(new Customer("John", "Smith", "john", "123"));
