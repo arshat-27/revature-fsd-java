@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.revature.bankapp.account.Account;
 import com.revature.bankapp.account.ViewAccount;
+import com.revature.bankapp.form.Form;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.model.DataManager;
 
@@ -13,6 +14,8 @@ public class CustomerMainMenu extends Menu {
 		super(name);
 		addMenuItem("View Accounts");
 		addMenuItem("Create Account");
+		addMenuItem("Back To Main Menu");
+		addMenuItem("Exit");
 	}
 
 	@Override
@@ -20,7 +23,7 @@ public class CustomerMainMenu extends Menu {
 		Scanner scanner = new Scanner(System.in);
 		switch(selection) {
 		case 1:
-			ViewAccount.accountList();
+			ViewAccount.accountListandbalance();
 			displayMenuAndCaptureSelection();
 			break;
 			
@@ -40,6 +43,15 @@ public class CustomerMainMenu extends Menu {
 			DataManager.addAccount(new Account(accountNumber,balance));
 			System.out.println("Account added successfully.");
 			displayMenuAndCaptureSelection();
+			break;
+			
+		case 3:
+			MainMenu menu = new MainMenu("Logged out \n====\nMain menu");
+			menu.displayMenuAndCaptureSelection();
+			break;
+			
+		case 4:
+			System.out.println("Thank You Visit Again");
 			break;
 		}
 		
