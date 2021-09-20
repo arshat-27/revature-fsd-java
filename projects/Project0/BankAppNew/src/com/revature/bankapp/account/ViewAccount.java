@@ -1,7 +1,12 @@
 package com.revature.bankapp.account;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
+import com.revature.bankapp.dao.impl.TransactionDaoImpl;
+import com.revature.bankapp.model.DataManager;
 
 public class ViewAccount {
 		AccountDaoImpl accountdao = new AccountDaoImpl();

@@ -12,20 +12,21 @@ public class TransactionMenu extends Menu{
 	
 	//public static String AccountNumber;
 	//public static String transferAccNum;
-	Scanner sc = new Scanner(System.in);
-	CustomerMainMenu cm = new CustomerMainMenu("Customer Menu");
+	
+	CustomerMainMenu cmm = new CustomerMainMenu("Customer Menu");
 	public static String  accNumber;
 	ViewTransaction vt = new ViewTransaction();
+	Scanner sc = new Scanner(System.in);
 	
 	public TransactionMenu(String name) {
 		super(name);
 		addMenuItem("Withdraw");
 		addMenuItem("Deposit");
 		addMenuItem("View Transactions");
-		//addMenuItem("View Balance");
+		addMenuItem("View Balance");
 		//addMenuItem("Transfer to account");
-		//addMenuItem("Return to Customer Menu");
-		//addMenuItem("LogOut");
+		addMenuItem("Return to Customer Menu");
+		addMenuItem("LogOut");
 	}
 	
 	public String getAccount() {
@@ -49,7 +50,7 @@ public class TransactionMenu extends Menu{
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			cm.displayMenu();
+			cmm.displayMenuAndCaptureSelection();
 			break;
 
 			case 2:
@@ -61,25 +62,25 @@ public class TransactionMenu extends Menu{
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			cm.displayMenu();
+			cmm.displayMenuAndCaptureSelection();
 			break;
 			
 		case 3:
 			vt.TransactionList();
-			cm.displayMenu();
+			cmm.displayMenuAndCaptureSelection();
 			break;
 			
-		/*case 4:
+		case 4:
 			try {
-				double balance = accountdao.currentAccount().getInitialAmount();
+				double balance = accountdao.currentAccount().getBalance();
 				System.out.println("Balance: " + balance);
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
-			cm.displayMenu();
+			cmm.displayMenuAndCaptureSelection();
 			break;
 		
-		case 5:
+			/*case 5:
 			System.out.println("Enter Account Number of receiver: ");
 			transferAccNum = sc.nextLine();
 			System.out.println("Enter amount to transfer: ");
@@ -98,19 +99,20 @@ public class TransactionMenu extends Menu{
 				System.out.println("deposit failed");
 			}
 			cm.displayMenu();
+			break;*/
+			
+			case 6:
+			cmm.displayMenuAndCaptureSelection();
 			break;
 			
-		case 6:
-			cm.displayMenu();
-			
 		case 7:
-			MainMenu mm = new MainMenu("Main Menu");
-			mm.displayMenu();
-		}*/
+			CustomerMenu cm = new CustomerMenu("Customer Menu");
+			cm.displayMenuAndCaptureSelection();
+		}
 		
 	}
 
 	
 	
 	}
-}
+

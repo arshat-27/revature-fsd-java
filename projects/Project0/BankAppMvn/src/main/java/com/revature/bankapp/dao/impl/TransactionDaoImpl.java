@@ -13,7 +13,7 @@ import com.revature.bankapp.dao.TransactionDao;
 import com.revature.bankapp.dao.Util;
 
 public class TransactionDaoImpl implements TransactionDao {
-	AccountDaoImpl accdao = new AccountDaoImpl();
+	//AccountDaoImpl accdao = new AccountDaoImpl();
 
 	public void insert(Transactions transaction) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
@@ -21,7 +21,7 @@ public class TransactionDaoImpl implements TransactionDao {
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setString(1, String.valueOf(transaction.getType()));
 			statement.setDouble(2, transaction.getAmount());
-			statement.setInt(3, accdao.currentAccountId);
+			statement.setInt(3, AccountDaoImpl.currentAccountId);
 			statement.executeUpdate();
 
 		}
@@ -33,7 +33,7 @@ public class TransactionDaoImpl implements TransactionDao {
 			String sql = "update account set balance = ? where id = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setDouble(1, account.getBalance());
-			statement.setInt(2, accdao.currentAccountId);
+			statement.setInt(2, AccountDaoImpl.currentAccountId);
 			statement.executeUpdate();
 		}
 
@@ -44,7 +44,7 @@ public class TransactionDaoImpl implements TransactionDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where accountid = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(1, accdao.currentAccountId);
+			statement.setInt(1, AccountDaoImpl.currentAccountId);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Transactions t = new Transactions();
