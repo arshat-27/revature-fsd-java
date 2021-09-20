@@ -6,11 +6,10 @@ import java.util.Scanner;
 import com.revature.bankapp.account.Account;
 import com.revature.bankapp.account.ViewAccount;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
-import com.revature.bankapp.form.Form;
-import com.revature.bankapp.form.CustomerLogin;
-import com.revature.bankapp.model.DataManager;
+
 
 public class CustomerMainMenu extends Menu {
+	
 
 	public CustomerMainMenu(String name) {
 		super(name);
@@ -23,11 +22,12 @@ public class CustomerMainMenu extends Menu {
 
 	@Override
 	void handleAction() {
+		ViewAccount va = new ViewAccount();
 		Scanner scanner = new Scanner(System.in);
 		AccountDaoImpl accountdao = new AccountDaoImpl();
 		switch(selection) {
 		case 1:
-			ViewAccount.accountListandbalance();
+			va.accountListandbalance();
 			displayMenuAndCaptureSelection();
 			break;
 			
@@ -63,6 +63,7 @@ public class CustomerMainMenu extends Menu {
 			
 			System.out.println("Select Withdraw/Deposit");
 			TransactionMenu tmenu = new TransactionMenu("Transaction Menu");
+			tmenu.getAccount();
 			tmenu.displayMenuAndCaptureSelection();
 			break;
 			

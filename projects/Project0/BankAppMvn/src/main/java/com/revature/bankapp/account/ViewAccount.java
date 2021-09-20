@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
+import com.revature.bankapp.dao.impl.TransactionDaoImpl;
 import com.revature.bankapp.model.DataManager;
 
 public class ViewAccount {
-	 static AccountDaoImpl accountdao = new AccountDaoImpl();
-
-	public static Account accountListandbalance() {
-		// Account account=new Account();
-		// for (int i = 0; i < DataManager.accountList.size(); i++) {
-		// System.out.println((i + 1) + "] " + Account.getAccountNumber());
+		AccountDaoImpl accountdao = new AccountDaoImpl();
+	 	 
+	public  Account accountListandbalance() {
 		int i=1;
 		try {
 			for (Account account : accountdao.accountList()) {

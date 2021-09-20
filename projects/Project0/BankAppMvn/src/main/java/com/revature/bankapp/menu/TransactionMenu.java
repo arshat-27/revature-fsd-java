@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.revature.bankapp.account.ViewAccount;
+import com.revature.bankapp.account.ViewTransaction;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
 
 public class TransactionMenu extends Menu{
@@ -13,13 +14,14 @@ public class TransactionMenu extends Menu{
 	//public static String transferAccNum;
 	Scanner sc = new Scanner(System.in);
 	CustomerMainMenu cm = new CustomerMainMenu("Customer Menu");
-	public String accNumber;
+	public static String  accNumber;
+	ViewTransaction vt = new ViewTransaction();
 	
 	public TransactionMenu(String name) {
 		super(name);
 		addMenuItem("Withdraw");
 		addMenuItem("Deposit");
-		//addMenuItem("View Transactions");
+		addMenuItem("View Transactions");
 		//addMenuItem("View Balance");
 		//addMenuItem("Transfer to account");
 		//addMenuItem("Return to Customer Menu");
@@ -62,17 +64,12 @@ public class TransactionMenu extends Menu{
 			cm.displayMenu();
 			break;
 			
-		/*case 3:
-			try {
-				accountdao.currentAccount();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			ViewAccount.transactionsList();
+		case 3:
+			vt.TransactionList();
 			cm.displayMenu();
 			break;
 			
-		case 4:
+		/*case 4:
 			try {
 				double balance = accountdao.currentAccount().getInitialAmount();
 				System.out.println("Balance: " + balance);

@@ -2,7 +2,10 @@ package com.revature.bankapp.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.revature.bankapp.account.Account;
 import com.revature.bankapp.account.Transactions;
@@ -34,5 +37,24 @@ public class TransactionDaoImpl implements TransactionDao {
 			statement.executeUpdate();
 		}
 
+	}
+
+	public List<Transactions> transactionList() throws SQLException {
+		List<Transactions> transactionList = new ArrayList<>();
+		try (Connection connection = Util.getConnection()) {
+			String sql = "select * from account where accountid = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, accdao.currentAccountId);
+			ResultSet resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				Transactions t = new Transactions();
+				t.setType(resultSet.getString("type").charAt(0));
+				t.setAmount(resultSet.getDouble("amount"));
+				transactionList.add(t);
+
+			}
+		}
+
+		return transactionList;
 	}
 }

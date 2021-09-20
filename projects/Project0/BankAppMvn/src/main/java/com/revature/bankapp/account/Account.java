@@ -23,11 +23,11 @@ public class Account {
 			System.out.println("Transaction Canont be Implied");}
 		else if (balance >= amount) {
 			balance-=amount;
+			System.out.println("Transaction Successful");
 			try {
 				tdao.insert(new Transactions('w',amount));
 				tdao.update(this);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			}
@@ -39,6 +39,7 @@ public class Account {
 			System.out.println("Transaction Canont be Implied");}
 		else if (balance >= amount) {
 			balance+=amount;
+			System.out.println("Transaction Successful");
 			try {
 				tdao.insert(new Transactions('d',amount));
 				tdao.update(this);

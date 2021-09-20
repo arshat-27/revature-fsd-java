@@ -15,7 +15,7 @@ import com.revature.bankapp.menu.TransactionMenu;
 import com.revature.bankapp.model.Customer;
 
 public class AccountDaoImpl implements AccountDao {
-	CustomerDaoImpl customerdaoimpl = new CustomerDaoImpl();
+	CustomerDaoImpl cdaoo = new CustomerDaoImpl();
 	public static int currentAccountId;
 	public static int transferAccountId;
 
@@ -27,7 +27,7 @@ public class AccountDaoImpl implements AccountDao {
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, account.getAccountNumber());
 			statement.setDouble(2, account.getBalance());
-			statement.setInt(3,customerdaoimpl.currentCustomerId);
+			statement.setInt(3,cdaoo.currentCustomerId);
 			statement.executeUpdate();
 
 			ResultSet rs = statement.getGeneratedKeys();
@@ -43,7 +43,7 @@ public class AccountDaoImpl implements AccountDao {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where customerid = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setInt(1, customerdaoimpl.currentCustomerId);
+			statement.setInt(1, cdaoo.currentCustomerId);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Account account = new Account();
