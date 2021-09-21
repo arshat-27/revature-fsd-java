@@ -5,8 +5,18 @@
     color: yellow;
     font-weight: bold;
     cursor: pointer
+    margin: 10px
 
 }
+
 #heading{
     color:blue
 }
+
+div{
+    border: 2px solid blue;
+}
+
+/* *{
+    border: 5px solid blue;
+} */

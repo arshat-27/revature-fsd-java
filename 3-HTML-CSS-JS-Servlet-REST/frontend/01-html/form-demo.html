@@ -5,14 +5,14 @@
     </head>
     <body>
         <h1>Form Demo</h1>
-        <form>
+        <form method="post" action="https://www.w3schools.com/action_page.php">
             <label for="name">Name : </label> 
-            <input type="text" id="name" placeholder="Enter Name" value="John"><br><br>
+            <input type="text" id="name" name ="name" placeholder="Enter Name" value="John"><br><br>
             <label for="password">Password : </label>
-            <input type="Password" id="password " placeholder="Minimum 8 Characters" required ><br><br>
+            <input type="Password" id="password " name = "password" placeholder="Minimum 8 Characters" required value ="123"><br><br>
 
             <label for="email">Email: </label>
-            <input type="text" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.9.-]+\.[a-z]{2,}$" title="Enter valid Email."><br><br>
+            <input type="text" id="email" name="email" value="arshat@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.9.-]+\.[a-z]{2,}$" title="Enter valid Email."><br><br>
 
             <select>
                 <option>Red</option>
@@ -21,21 +21,21 @@
             </select><br><br>
 
             <label for="">Gender</label><br>
-            <input type="radio" name="gender" id="male" >
+            <input type="radio" name="gender" value="m" id="male" >
             <label id="male">Male </label>
-            <input type="radio" name="gender" id="female" checked >
+            <input type="radio" name="gender" value="f" id="female" checked >
             <label id="female">Female </label><br><br>
-            <select multiple>
+            <select multiple name="Languages -m">
                 <option>English</option>
                 <option>Arabic</option>
                 <option>Spanish</option>
                 <option>French</option>
             </select><br><br>
-            <input type="checkbox" id="english"><label for="english">English</label>
-            <input type="checkbox" id="arabic" checked><label for="arabic">Arabic</label>
-            <input type="checkbox" id="spanish"><label for="spanish">Spanish</label>
-            <input type="checkbox" id="french"><label for="french">French</label>
-            <textarea>Line 1
+            <input type="checkbox" id="english" name="Languages" value="English"><label for="english">English</label>
+            <input type="checkbox" id="arabic" name="Languages" value="Arabic" checked><label for="arabic">Arabic</label>
+            <input type="checkbox" id="spanish" name="Languages"value="Spanish"><label for="spanish">Spanish</label>
+            <input type="checkbox" id="french" name="Languages"value="Frenchs"><label for="french">French</label>
+            <textarea name= "text area">Line 1
 Line 2
 Line 3
             </textarea><br><br>
