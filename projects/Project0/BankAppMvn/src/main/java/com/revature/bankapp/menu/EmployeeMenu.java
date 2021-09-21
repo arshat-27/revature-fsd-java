@@ -3,6 +3,7 @@ package com.revature.bankapp.menu;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import com.revature.bankapp.account.ViewCustomers;
 import com.revature.bankapp.dao.impl.CustomerDaoImpl;
 import com.revature.bankapp.model.Customer;
 
@@ -49,9 +50,11 @@ public class EmployeeMenu extends Menu {
 			System.out.println("Customer added successfully.");
 			displayMenuAndCaptureSelection();
 			break;		
+		
+		case 2 :
+			ViewCustomers.customerList();
+		
 		}
-		
-		
 	}
 	
 

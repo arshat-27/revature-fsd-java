@@ -5,11 +5,10 @@ import java.sql.SQLException;
 import com.revature.bankapp.dao.impl.TransactionDaoImpl;
 
 public class ViewTransaction {
-	TransactionDaoImpl tdao = new TransactionDaoImpl();
-	public  Transactions TransactionList() {
+	public static  Transactions TransactionList() {
 		int i=1;
 		try {
-			for (Transactions t : tdao.transactionList()) {
+			for (Transactions t : TransactionDaoImpl.transactionList()) {
 				System.out.println((i + 1) + "} " +" amount =  "+t.getAmount() +"  Type = "+ t.getType());
 				i+=1;
 

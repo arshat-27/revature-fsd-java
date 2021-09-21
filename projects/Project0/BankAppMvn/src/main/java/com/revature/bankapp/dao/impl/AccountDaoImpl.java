@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.bankapp.account.Account;
+import com.revature.bankapp.account.Transactions;
 import com.revature.bankapp.dao.AccountDao;
 import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.menu.TransactionMenu;
@@ -27,7 +28,7 @@ public class AccountDaoImpl implements AccountDao {
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, account.getAccountNumber());
 			statement.setDouble(2, account.getBalance());
-			statement.setInt(3,cdaoo.currentCustomerId);
+			statement.setInt(3, cdaoo.currentCustomerId);
 			statement.executeUpdate();
 
 			ResultSet rs = statement.getGeneratedKeys();
@@ -57,17 +58,55 @@ public class AccountDaoImpl implements AccountDao {
 		return accountList;
 
 	}
-	
-	TransactionMenu tmenu = new TransactionMenu("Transaction Menu");
-	public Account currentAccount() throws SQLException {
+
+	public static void insertTransfer(Transactions transaction) throws SQLException {
+		try (Connection connection = Util.getConnection()) {
+			String sql = "insert into transaction (type, amount, accountid) values (?, ?, ?)";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, String.valueOf(transaction.getType()));
+			statement.setDouble(2, transaction.getAmount());
+			statement.setInt(3, transferAccountId);
+			statement.executeUpdate();
+		}
+	}
+
+	public static Account currentAccount() throws SQLException {
 		Account account = null;
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where accountno = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, tmenu.accNumber);
+			statement.setString(1, TransactionMenu.accNumber);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentAccountId = resultSet.getInt("id");
+				String accNumber = resultSet.getString("accountno");
+				Double balance = resultSet.getDouble("balance");
+
+				account = new Account(accNumber, balance);
+			}
+		}
+		return account;
+	}
+
+	public static void updateTransfer(Account account) throws SQLException {
+		try (Connection connection = Util.getConnection()) {
+			String sql = "update account set balance = ? where id = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setDouble(1, account.getBalance());
+			statement.setInt(2, transferAccountId);
+			statement.executeUpdate();
+		}
+	}
+
+	public Account transferAccount() throws SQLException {
+		Account account = null;
+		try (Connection connection = Util.getConnection()) {
+			String sql = "select * from account where accountno = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, TransactionMenu.transferAccNum);
+			ResultSet resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				transferAccountId = resultSet.getInt("id");
 				String accNumber = resultSet.getString("accountno");
 				Double balance = resultSet.getDouble("balance");
 

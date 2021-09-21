@@ -39,18 +39,20 @@ public class TransactionDaoImpl implements TransactionDao {
 
 	}
 
-	public List<Transactions> transactionList() throws SQLException {
+	public static List<Transactions> transactionList() throws SQLException {
 		List<Transactions> transactionList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
-			String sql = "select * from account where accountid = ?";
+			String sql = "select * from transaction where accountid = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setInt(1, AccountDaoImpl.currentAccountId);
+			
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				Transactions t = new Transactions();
 				t.setType(resultSet.getString("type").charAt(0));
 				t.setAmount(resultSet.getDouble("amount"));
 				transactionList.add(t);
+				
 
 			}
 		}

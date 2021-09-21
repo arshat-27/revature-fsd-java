@@ -10,12 +10,12 @@ import com.revature.bankapp.dao.impl.AccountDaoImpl;
 public class TransactionMenu extends Menu{
 	
 	
-	//public static String AccountNumber;
-	//public static String transferAccNum;
+	
+	public static String transferAccNum;
 	
 	CustomerMainMenu cmm = new CustomerMainMenu("Customer Menu");
 	public static String  accNumber;
-	ViewTransaction vt = new ViewTransaction();
+	
 	Scanner sc = new Scanner(System.in);
 	
 	public TransactionMenu(String name) {
@@ -24,7 +24,7 @@ public class TransactionMenu extends Menu{
 		addMenuItem("Deposit");
 		addMenuItem("View Transactions");
 		addMenuItem("View Balance");
-		//addMenuItem("Transfer to account");
+		addMenuItem("Transfer to account");
 		addMenuItem("Return to Customer Menu");
 		addMenuItem("LogOut");
 	}
@@ -66,7 +66,13 @@ public class TransactionMenu extends Menu{
 			break;
 			
 		case 3:
-			vt.TransactionList();
+			try {
+				AccountDaoImpl.currentAccount();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ViewTransaction.TransactionList();
 			cmm.displayMenuAndCaptureSelection();
 			break;
 			
@@ -80,7 +86,7 @@ public class TransactionMenu extends Menu{
 			cmm.displayMenuAndCaptureSelection();
 			break;
 		
-			/*case 5:
+			case 5:
 			System.out.println("Enter Account Number of receiver: ");
 			transferAccNum = sc.nextLine();
 			System.out.println("Enter amount to transfer: ");
@@ -98,8 +104,8 @@ public class TransactionMenu extends Menu{
 				e.printStackTrace();
 				System.out.println("deposit failed");
 			}
-			cm.displayMenu();
-			break;*/
+			cmm.displayMenuAndCaptureSelection();
+			break;
 			
 			case 6:
 			cmm.displayMenuAndCaptureSelection();
