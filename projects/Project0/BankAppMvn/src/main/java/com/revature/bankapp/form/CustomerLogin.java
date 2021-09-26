@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.revature.bankapp.dao.impl.CustomerDaoImpl;
 import com.revature.bankapp.menu.CustomerMainMenu;
 import com.revature.bankapp.model.Customer;
-import com.revature.bankapp.model.DataManager;
+
 
 public class CustomerLogin extends Form {
 	private String email;

@@ -9,7 +9,54 @@ public class Account {
 	protected String accountNumber;
 	protected double balance;
 	protected int CustomerId;
+	protected String FirstName;
+	protected String LastName;
+	protected int id;
+	protected String Email;
+	protected String phoneno;
 	
+	public String getPhoneno() {
+		return phoneno;
+	}
+	public void setPhoneno(String phoneno) {
+		this.phoneno = phoneno;
+	}
+	public String getFirstName() {
+		return FirstName;
+	}
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Account [accountNumber=" + accountNumber + ", balance=" + balance + ", CustomerId=" + CustomerId
+				+ ", FirstName=" + FirstName + ", LastName=" + LastName + ", id=" + id + ", Email=" + Email
+				+ ", phoneno=" + phoneno + "]";
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public String getLastName() {
+		return LastName;
+	}
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setCustomerId(int customerId) {
+		CustomerId = customerId;
+	}
 	TransactionDaoImpl tdao = new TransactionDaoImpl();
 
 	
@@ -36,6 +83,7 @@ public class Account {
 	}
 	
 	public double deposit(double amount) {
+		//System.out.println(amount);
 		if (amount <= 0) {
 			System.out.println("Transaction Canont be Implied");}
 		else if (balance >= amount) {

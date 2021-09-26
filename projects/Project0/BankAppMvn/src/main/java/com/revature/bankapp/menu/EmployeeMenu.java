@@ -1,10 +1,14 @@
 package com.revature.bankapp.menu;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Scanner;
 
+import com.revature.bankapp.account.Account;
+import com.revature.bankapp.account.Transactions;
 import com.revature.bankapp.account.ViewCustomers;
 import com.revature.bankapp.dao.impl.CustomerDaoImpl;
+import com.revature.bankapp.dao.impl.EmployeeDaoImpl;
 import com.revature.bankapp.model.Customer;
 
 public class EmployeeMenu extends Menu {
@@ -41,8 +45,11 @@ public class EmployeeMenu extends Menu {
 			System.out.print("Password: ");
 			String password = scanner.nextLine();
 			
+			System.out.print("Phoneno: ");
+			String phoneno = scanner.nextLine();
+			
 			try {
-				customerdao.create(new Customer(firstName, lastName, email, password));
+				customerdao.create(new Customer(firstName, lastName, email, password,phoneno));
 			} catch (SQLException e) {
 				
 				e.printStackTrace();
@@ -53,6 +60,33 @@ public class EmployeeMenu extends Menu {
 		
 		case 2 :
 			ViewCustomers.customerList();
+			displayMenuAndCaptureSelection();
+			
+		case 3:
+			try {
+				List<Account> list = EmployeeDaoImpl.eViewAccount();
+				for(int i =0; i <list.size(); i++) {
+					System.out.println((i+1) + ") " + list.get(i));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			displayMenuAndCaptureSelection();
+			break;
+		case 4:
+			try {
+				List<Transactions> list = EmployeeDaoImpl.eViewTransaction();
+				for(int i =0; i <list.size(); i++) {
+					System.out.println((i+1) + ") " + list.get(i));
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			displayMenuAndCaptureSelection();
+			break;
+			
 		
 		}
 	}

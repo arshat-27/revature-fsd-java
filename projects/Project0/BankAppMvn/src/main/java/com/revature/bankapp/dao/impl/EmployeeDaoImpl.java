@@ -4,7 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.revature.bankapp.account.Account;
+import com.revature.bankapp.account.Transactions;
 import com.revature.bankapp.dao.EmployeeDao;
 import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.model.Customer;
@@ -40,16 +44,67 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			statement.setString(1, Email);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
-				//currentCustomerId = resultSet.getInt("id");
+				// currentCustomerId = resultSet.getInt("id");
 				String FirstName = resultSet.getString("FirstName");
 				String LastName = resultSet.getString("LastName");
 				String email = resultSet.getString("Email");
 				String password = resultSet.getString("password");
+				String phoneno = resultSet.getString("Phoneno");
 
-				customer = new Customer(FirstName, LastName, email, password);
+				customer = new Customer(FirstName, LastName, email, password,phoneno);
 			}
 		}
 		return customer;
+
+	}
+
+	public static List eViewAccount() throws SQLException {
+		List<Account> accountList = new ArrayList<>();
+		try (Connection connection = Util.getConnection()) {
+			String sql = "select c.id, c.FirstName,c.LastName,c.Email,c.phoneno,accountno, balance from account\r\n"
+					+ " inner join customer c on customerid = c.id;";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				Account accountTemp = new Account();
+
+				accountTemp.setId(resultSet.getInt("id"));
+				accountTemp.setFirstName(resultSet.getString("FirstName"));
+				accountTemp.setLastName(resultSet.getString("LastName"));
+				accountTemp.setEmail(resultSet.getString("Email"));
+				accountTemp.setPhoneno(resultSet.getString("Phoneno"));
+				accountTemp.setAccountNumber(resultSet.getString("accountno"));
+				accountTemp.setBalance(resultSet.getDouble("balance"));
+
+				accountList.add(accountTemp);
+
+			}
+		}
+		return accountList;
+	}
+
+	public static List<Transactions> eViewTransaction() throws SQLException {
+		List<Transactions> transactionList = new ArrayList<>();
+		try (Connection connection = Util.getConnection()) {
+			String sql = "select c.id, c.FirstName, c.LastName, c.Email,a.accountno, a.balance, t.type , t.amount \r\n"
+					+ "from transaction t\r\n" + "inner join account a \r\n" + "on accountId = a.id \r\n"
+					+ "inner join customer c\r\n" + " on customerid = c.id";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				Transactions transactionTemp = new Transactions();
+				transactionTemp.setCustomerId(resultSet.getInt("id"));
+				transactionTemp.setFirstName(resultSet.getString("FirstName"));
+				transactionTemp.setLastName(resultSet.getString("LastName"));
+				transactionTemp.setAccountNumber(resultSet.getString("accountno"));
+				transactionTemp.setBalance(resultSet.getDouble("balance"));
+				transactionTemp.setType(resultSet.getString("type").charAt(0));
+				transactionTemp.setAmount(resultSet.getDouble("amount"));
+				transactionList.add(transactionTemp);
+
+			}
+		}
+		return transactionList;
 
 	}
 }

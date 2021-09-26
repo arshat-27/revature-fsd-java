@@ -9,7 +9,7 @@ public class ViewTransaction {
 		int i=1;
 		try {
 			for (Transactions t : TransactionDaoImpl.transactionList()) {
-				System.out.println((i + 1) + "} " +" amount =  "+t.getAmount() +"  Type = "+ t.getType());
+				System.out.println((i) + "} " +" amount =  "+t.getAmount() +"  Type = "+ t.getType());
 				i+=1;
 
 			}

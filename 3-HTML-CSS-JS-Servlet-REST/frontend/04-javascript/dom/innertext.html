@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>innerText</title>
+    </head>
+    <body>
+        <p id ="para">This is a paragraph.</p>
+        <p>Another para.</p>
+        <script>
+            //element will contain Htmlelement object.
+             var element = document.getElementById("para");
+            console.log(element.innerText);
+            element.innerText = "New Paragraph Content";
+        </script>
+    </body>
+</html>

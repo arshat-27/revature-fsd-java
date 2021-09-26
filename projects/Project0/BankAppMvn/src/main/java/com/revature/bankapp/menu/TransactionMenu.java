@@ -67,7 +67,7 @@ public class TransactionMenu extends Menu{
 			
 		case 3:
 			try {
-				AccountDaoImpl.currentAccount();
+				accountdao.currentAccount();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

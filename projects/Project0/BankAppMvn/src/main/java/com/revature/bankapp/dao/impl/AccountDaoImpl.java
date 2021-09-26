@@ -70,7 +70,7 @@ public class AccountDaoImpl implements AccountDao {
 		}
 	}
 
-	public static Account currentAccount() throws SQLException {
+	public  Account currentAccount() throws SQLException {
 		Account account = null;
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where accountno = ?";

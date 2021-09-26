@@ -8,11 +8,11 @@ public class Customer {
 	private String lastName;
 	private String email;
 	private String password;
-	//private List<Account> accountList;
+	private String phoneno;
 	
 	private static long counter = 0;
 	
-	public Customer(String firstName, String lastName, String email, String password) {
+	public Customer(String firstName, String lastName, String email, String password,String phoneno) {
 		super();
 		counter++;
 		this.id = counter;
@@ -20,11 +20,33 @@ public class Customer {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.phoneno=phoneno;
 	}
 	public Customer() {
 		
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getPhoneno() {
+		return phoneno;
+	}
+	public void setPhoneno(String phoneno) {
+		this.phoneno = phoneno;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public long getId() {
 		return id;
 	}

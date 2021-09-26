@@ -17,14 +17,14 @@ public class CustomerDaoImpl implements CustomerDao {
 	public static int currentCustomerId;
 
 	public int create(Customer customer) throws SQLException {
-		System.out.println("Create Customer ");
 		try (Connection connection = Util.getConnection()) {
-			String sql = "insert into customer (FirstName, LastName, Email, Password) values (?, ?, ?, ?)";
+			String sql = "insert into customer (FirstName, LastName, Email, Password,Phoneno) values (?, ?, ?, ?,?)";
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, customer.getFirstName());
 			statement.setString(2, customer.getLastName());
 			statement.setString(3, customer.getEmail());
 			statement.setString(4, customer.getPassword());
+			statement.setString(5, customer.getPhoneno());
 			statement.executeUpdate();
 
 			ResultSet rs = statement.getGeneratedKeys();
@@ -50,8 +50,9 @@ public class CustomerDaoImpl implements CustomerDao {
 				String LastName = resultSet.getString("LastName");
 				String email = resultSet.getString("Email");
 				String password = resultSet.getString("password");
+				String phoneno = resultSet.getString("Phoneno");
 
-				customer = new Customer(FirstName, LastName, email, password);
+				customer = new Customer(FirstName, LastName, email, password,phoneno);
 			}
 		}
 		return customer;
@@ -66,13 +67,14 @@ public class CustomerDaoImpl implements CustomerDao {
 			// statement.setInt(1, cdaoo.currentCustomerId);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
-				Customer customer = new Customer();
-				String FirstName = resultSet.getString("firstName");
-				String LastName = resultSet.getString("lastName");
-				String email = resultSet.getString("email");
-				String password = resultSet.getString("password");
+				Customer c = new Customer();
+				c.setFirstName(resultSet.getString("FirstName"));
+				c.setLastName(resultSet.getString("LastName"));
+				c.setEmail(resultSet.getString("Email"));
+				c.setPhoneno(resultSet.getString("Phoneno"));
+				
 
-				customerList.add(customer);
+				customerList.add(c);
 
 			}
 		}

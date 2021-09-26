@@ -10,7 +10,7 @@ public class ViewAccount {
 		int i=1;
 		try {
 			for (Account account : accountdao.accountList()) {
-				System.out.println((i + 1) + "} " +" Account Number =  "+account.getAccountNumber() +"  Balance = "+ account.getBalance());
+				System.out.println((i) + "} " +" Account Number =  "+account.getAccountNumber() +"  Balance = "+ account.getBalance());
 				i+=1;
 
 			}

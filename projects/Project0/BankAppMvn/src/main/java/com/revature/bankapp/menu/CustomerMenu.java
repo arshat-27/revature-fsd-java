@@ -7,7 +7,7 @@ import com.revature.bankapp.dao.impl.CustomerDaoImpl;
 import com.revature.bankapp.form.CustomerLogin;
 import com.revature.bankapp.form.EmployeeLogin;
 import com.revature.bankapp.model.Customer;
-import com.revature.bankapp.model.DataManager;
+
 
 public class CustomerMenu extends Menu {
 
@@ -43,8 +43,11 @@ public class CustomerMenu extends Menu {
 			System.out.print("Password: ");
 			String password = scanner.nextLine();
 			
+			System.out.print("Phoneno: ");
+			String phoneno = scanner.nextLine();
+			
 			try {
-				customerdao.create(new Customer(firstName, lastName, email, password));
+				customerdao.create(new Customer(firstName, lastName, email, password,phoneno));
 			} catch (SQLException e) {
 				
 				e.printStackTrace();

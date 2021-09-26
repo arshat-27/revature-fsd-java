@@ -3,11 +3,37 @@ package com.revature.bankapp.account;
 public class Transactions {
 
 	private int customerId;
-	private String name;
+	private String FirstName;
+	private String LastName;
+	
 	private String accountNumber;
 	private double balance;
 	private int accountId;
 	private char type;
+	public String getFirstName() {
+		return FirstName;
+	}
+
+	public void setFirstName(String firstName) {
+		FirstName = firstName;
+	}
+
+	public String getLastName() {
+		return LastName;
+	}
+
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
 	private double amount;
 
 	public Transactions(char type, double amount) {
@@ -29,11 +55,11 @@ public class Transactions {
 	}
 
 	public String getName() {
-		return name;
+		return FirstName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.FirstName = name;
 	}
 
 	public String getAccountNumber() {
@@ -82,7 +108,7 @@ public class Transactions {
 
 	@Override
 	public String toString() {
-		return "CustomerId: " + customerId + "  Name: " + name + "  Account Number: " + accountNumber
+		return "CustomerId: " + customerId + "  Name: " + FirstName + "  Account Number: " + accountNumber
 				+ "  Balance: " + balance + "  Account Id: " + accountId + "  Type: " + type + "  Amount: "
 				+ amount;
 	}
