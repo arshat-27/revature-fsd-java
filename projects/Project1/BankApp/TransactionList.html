@@ -34,6 +34,21 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
                 </li>
+               
+                <li class="nav-item ">
+                    <a class="nav-link disabled" href="signup.html" tabindex="-1" aria-disabled="true">SignUp</a>
+                </li>
+
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="CustomerLogin.html">CustomerLogin</a>
+                        <a class="dropdown-item" href="EmployeeLogin.html">EmployeeLogin</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="#"></a>
+                    </div>
+                </li>
 
                 <li class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -42,13 +57,14 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="Accounts.html">MyAccounts</a>
-                        <a class="dropdown-item" href="#">Create*Account</a>
+                        <a class="dropdown-item" href="CreateAccount.html">Create*Account</a>
+                        <a class="dropdown-item" href="Transaction.html">Withdraw/Deposit</a>
                         <!-- <div class="dropdown-divider"></div> -->
                         <a class="dropdown-item" href="#"></a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d" href="#" >LogOut</a>
+                    <a class="nav-link d" href="home.html" >LogOut</a>
                 </li>
 
             </ul>
@@ -59,26 +75,18 @@
         <h1>Bank Of Arshat</h1><br><br>
 
     </div>
-    
-    <div class="dropdown">
-        <form action="">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="withdraw.html">withdrawl</a>
-          <!-- <a href="#">Link 2</a>
-          <a href="#">Link 3</a> -->
-        </form>
-        </div>
-      </div>
-    
 
-    <!-- <div class="csi">
-        <a href="withdraw.html"><input type="submit" value="Login">withdraw</a>
-        <a href="Customer.html"><input type="submit" value="Login"></a>
-        <a href="Customer.html"><input type="submit" value="Login"></a>
-        <a href="Customer.html"><input type="submit" value="Login"></a>
-  
-    </div> -->
+    <div class="csi">
+       
+        <div class="cls">
+            <h2>Transaction Lists Of Customer</h2>
+    
+        </div>
+        <form>
+            <label for="Amo"> Enter the Account Number: </label><input  type="Amo" required placeholder="Enter the Accont Number" />
+            <br /><br>
+            <a href="Accounts.html"><input type="submit" value="View Transaction List"></a>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
