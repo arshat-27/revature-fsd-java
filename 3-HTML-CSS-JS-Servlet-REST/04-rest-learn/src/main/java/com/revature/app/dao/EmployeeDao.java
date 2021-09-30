@@ -6,7 +6,7 @@ import com.revature.app.model.Employee;
 public interface EmployeeDao {
 	List<Employee> list() throws SQLException;
 	Employee get(int id) throws SQLException;
-	void create(Employee employee) throws SQLException;
+	int create(Employee employee) throws SQLException;
     void update(Employee employee) throws SQLException;
     void delete(int id) throws SQLException;
 

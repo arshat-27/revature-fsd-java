@@ -15,9 +15,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import com.revature.app.dao.impl.EmployeeDaoImpl;
 import com.revature.app.model.Department;
 import com.revature.app.model.Employee;
-import com.revature.com.dao.impl.EmployeeDaoImpl;
 
 @Path("/employees")
 public class EmployeeController {
@@ -89,7 +89,12 @@ public class EmployeeController {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response create(Employee employee) {
-		System.out.println(employee);
+		try {
+			dao.create(employee);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return Response.ok().build();
 	}
 
