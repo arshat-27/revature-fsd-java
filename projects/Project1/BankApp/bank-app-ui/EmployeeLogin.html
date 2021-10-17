@@ -7,21 +7,27 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Bankapp.Home</title>
     <link rel="stylesheet" href="styles/css.css">
+
+    <style>
+        .ig {
+            background-image: url("imges/b10.jpg");
+
+            height: 600px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
 </head>
 
 <body>
 
 
-    <!-- <a href="Home.html">Home</a>
-      <a href="Signup.html">SignUp</a>
-      <a href="CustomerLogin.html">CustomerLogin</a>
-      <a href="EmployeeLogin.html">EmployeeLogin</a>     -->
-
-
     <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="#" class="d-inline-block align-top" alt="">
-            <span class="badge badge-danger">B-O-A</span>
+            <img src="imges/B77.png" height="40" width="60">
+            <!-- <span class="badge badge-danger">BOS</span> -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +40,7 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
                 </li>
-               
+
                 <li class="nav-item ">
                     <a class="nav-link" href="signup.html">SignUp</a>
                 </li>
@@ -58,26 +64,32 @@
 
         </div>
     </nav>
-    <div class="cls">
+    <div class="ig">
         <h1>***Bank Of Arshat***</h1><br><br>
 
+
+        <div class="cls col-sm-4">
+            <form class="form-signin" id="frm">
+                <img class="#" src="#" alt="" width="" height="72">
+                <h1 class="h3 mb-3 font-weight-lighter">Employee Login</h1>
+
+                <label for="email">Email  :</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="Email address">
+                <div id="emailValidation" class="validation-error"></div>
+
+                <label for="psi">Password :</label>
+                <input type="password" id="psi" class="form-control" name="psi" placeholder="Password">
+                <div id="passwordValidation" class="validation-error"></div>
+
+
+
+                <button type="button" id="but" class="btn btn-info btn-lg">SignUp</button>
+
+
+            </form><br>
+        </div>
     </div>
 
-    <div class="csi">
-        <h3>Employee Login</h3><br><br>
-        
-            <label for="email">Email: </label>
-            <input type="text" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.9.-]+\.[a-z]{2,}$" title="Enter valid Email."
-                name="email" placeholder="Enter Your Email"><br><br>
-
-            <label for="ps">Password:</label>
-            <input type="password" id="ps" placeholder="Enter Your Password"><br><br>
-          
-
-            <a href="Employee.html"><input type="submit" value="Login"></a>
-       
-
-    </div>
 
 
 
@@ -93,6 +105,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+
+    <script src="scripts/employeelogin.js"></script>
 
 
 

@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.revature.bankapp.account.Account;
-import com.revature.bankapp.account.Transactions;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Transactions;
 import com.revature.bankapp.dao.AccountDao;
 import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.menu.TransactionMenu;

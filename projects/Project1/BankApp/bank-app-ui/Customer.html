@@ -7,6 +7,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Bankapp.Home</title>
     <link rel="stylesheet" href="styles/css.css">
+    <link rel="stylesheet" href="styles/customer.css">
 </head>
 
 <body>
@@ -20,8 +21,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="#" class="d-inline-block align-top" alt="">
-            <span class="badge badge-danger">B-O-A</span>
+            <img src="imges/B77.png" height="40" width="60">
+            <!-- <span class="badge badge-danger">BOS</span> -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,8 +76,45 @@
 
     </div>
 
-    <div class="csi">
-        <h3>bienvenido Mr/Ms @@ </h3><br><br>
+    <div class="container-fluid" id="cardContainer">
+        <div class="row" id="cardContents">
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="images/newCustomer2.jpg" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h4 class="card-title">Customer Details</h4>
+                  <p class="card-text">
+                      <ul id="customerDetails"></ul>
+                  </p>
+                  <hr>
+                  <a href="#" class="btn btn-success">Edit Details</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <!-- <img src="images/excistingCustomer2.jpg" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h5 class="card-title">Apply New Account</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptatem rerum adipisci facere consectetur ipsam dignissimos, ducimus cumque numquam et modi eum voluptatibus reiciendis! Ea lorem</p>
+                  <a href="CreateAccount.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply</a>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <!-- <img src="images/employee2.jpg" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h5 class="card-title">Accounts</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, reprehenderit eligendi, perferendis necessitatibus nostrum eaque dolore ullam saepe alias, cum atque dolor earum dignissimos ad!</p>
+                  <a href="accounts.html" class="btn btn-secondary">View Accounts</a>
+                </div>
+             </div>
+             <div class="card" style="width: 18rem;">
+                <!-- <img src="images/support1.jpg" class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                  <h5 class="card-title">Log Out</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quos, at obcaecati minus id similique aut eligendi fugiat ducimus iste mollitia! Deleniti totam nisi fugit.</p>
+                  <a href="home.html" class="btn btn-danger">Log Out</a>
+                </div>
+             </div>
+        </div>
+    </div>
   
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -1,0 +1,111 @@
+[http-nio-8080-exec-8] 2021-10-02 17:00:58 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-8] 2021-10-02 17:00:58 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@be3ff19
+[http-nio-8080-exec-8] 2021-10-02 17:01:01 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-8] 2021-10-02 18:08:03 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-8] 2021-10-02 18:08:03 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@6fd8a819
+[http-nio-8080-exec-8] 2021-10-02 18:08:03 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-3] 2021-10-02 18:15:16 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-3] 2021-10-02 18:15:16 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7c86bae7
+[http-nio-8080-exec-3] 2021-10-02 18:15:16 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-6] 2021-10-02 18:16:39 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-6] 2021-10-02 18:16:39 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7872544d
+[http-nio-8080-exec-6] 2021-10-02 18:16:39 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-4] 2021-10-03 10:11:40 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-4] 2021-10-03 10:11:40 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7c504494
+[http-nio-8080-exec-4] 2021-10-03 10:11:44 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-03 10:11:47 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-03 10:11:47 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7c2b51c2
+[http-nio-8080-exec-7] 2021-10-03 10:11:47 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-8] 2021-10-03 10:11:49 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-8] 2021-10-03 10:11:49 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@24e157e9
+[http-nio-8080-exec-8] 2021-10-03 10:11:50 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-14] 2021-10-03 10:14:41 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-14] 2021-10-03 10:14:41 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@71a84b01
+[http-nio-8080-exec-14] 2021-10-03 10:14:43 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-03 10:17:00 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-03 10:17:00 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@527ff493
+[http-nio-8080-exec-7] 2021-10-03 10:17:00 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-10] 2021-10-03 10:21:24 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-10] 2021-10-03 10:21:24 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7abc1bcb
+[http-nio-8080-exec-10] 2021-10-03 10:21:24 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-13] 2021-10-03 10:23:35 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-13] 2021-10-03 10:23:35 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@387cef10
+[http-nio-8080-exec-13] 2021-10-03 10:23:35 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-6] 2021-10-03 10:25:05 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-6] 2021-10-03 10:25:05 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@faf5927
+[http-nio-8080-exec-6] 2021-10-03 10:25:05 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-9] 2021-10-03 10:25:33 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-9] 2021-10-03 10:25:33 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@1116df07
+[http-nio-8080-exec-9] 2021-10-03 10:25:34 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-11] 2021-10-03 10:25:41 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-11] 2021-10-03 10:25:41 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@1357bcf6
+[http-nio-8080-exec-11] 2021-10-03 10:25:41 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-14] 2021-10-03 11:02:16 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-14] 2021-10-03 11:02:16 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@1ef93f9
+[http-nio-8080-exec-14] 2021-10-03 11:02:16 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-03 11:10:52 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-03 11:10:52 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@16ee2012
+[http-nio-8080-exec-7] 2021-10-03 11:10:53 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-10] 2021-10-03 11:11:24 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-10] 2021-10-03 11:11:24 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@660383a0
+[http-nio-8080-exec-10] 2021-10-03 11:11:24 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-13] 2021-10-03 11:12:36 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-13] 2021-10-03 11:12:36 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@741bc8e6
+[http-nio-8080-exec-13] 2021-10-03 11:12:36 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-6] 2021-10-03 11:13:45 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-6] 2021-10-03 11:13:45 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@5585f2a3
+[http-nio-8080-exec-6] 2021-10-03 11:13:45 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-8] 2021-10-03 11:13:59 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-8] 2021-10-03 11:13:59 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@6c06495e
+[http-nio-8080-exec-8] 2021-10-03 11:13:59 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-11] 2021-10-03 11:21:26 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-11] 2021-10-03 11:21:26 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@359e5d22
+[http-nio-8080-exec-11] 2021-10-03 11:21:26 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-14] 2021-10-03 11:31:14 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-14] 2021-10-03 11:31:14 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@7e7fd286
+[http-nio-8080-exec-14] 2021-10-03 11:31:14 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-03 11:33:19 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-03 11:33:19 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@4e1a3b85
+[http-nio-8080-exec-7] 2021-10-03 11:33:19 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-12] 2021-10-12 00:15:09 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-12] 2021-10-12 00:15:09 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=22222, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-12] 2021-10-12 00:15:09 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-14] 2021-10-12 00:15:29 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-14] 2021-10-12 00:15:29 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=22222, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-14] 2021-10-12 00:15:29 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-12 00:16:08 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-12 00:16:08 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=22222, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-7] 2021-10-12 00:16:08 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-10] 2021-10-12 00:16:35 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-10] 2021-10-12 00:16:35 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=2222, balance=1000.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-10] 2021-10-12 00:16:35 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-7] 2021-10-12 10:46:25 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-7] 2021-10-12 10:46:25 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=5463, balance=1000.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-7] 2021-10-12 10:46:26 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-6] 2021-10-15 11:41:45 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-6] 2021-10-15 11:41:45 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=789456321, balance=100000.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-6] 2021-10-15 11:41:45 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-1] 2021-10-15 11:52:47 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-1] 2021-10-15 11:52:47 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=99994649649, balance=100.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-1] 2021-10-15 11:52:47 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-4] 2021-10-15 12:05:39 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-4] 2021-10-15 12:05:39 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=111111111111111, balance=1.0E16, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-4] 2021-10-15 12:05:39 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-9] 2021-10-15 12:06:34 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-9] 2021-10-15 12:06:34 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=11111, balance=10000.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-9] 2021-10-15 12:06:35 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-14] 2021-10-15 12:56:27 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-14] 2021-10-15 12:56:27 DEBUG com.revature.bankapp.controller.CustomerController  - com.revature.bankapp.model.Customer@1a67783a
+[http-nio-8080-exec-14] 2021-10-15 12:56:29 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-2] 2021-10-16 17:58:13 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-2] 2021-10-16 17:58:13 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=123456789, balance=10000.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-2] 2021-10-16 17:58:14 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-9] 2021-10-16 18:19:15 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-9] 2021-10-16 18:19:15 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=1, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-9] 2021-10-16 18:19:15 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-6] 2021-10-16 18:20:15 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-6] 2021-10-16 18:20:15 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=1, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-6] 2021-10-16 18:20:16 INFO  com.revature.bankapp.controller.CustomerController  - End
+[http-nio-8080-exec-1] 2021-10-16 18:21:04 INFO  com.revature.bankapp.controller.CustomerController  - Start
+[http-nio-8080-exec-1] 2021-10-16 18:21:04 DEBUG com.revature.bankapp.controller.CustomerController  - Account [accountNumber=11, balance=10.0, CustomerId=0, FirstName=null, LastName=null, id=0, Email=null, phoneno=null]
+[http-nio-8080-exec-1] 2021-10-16 18:21:04 INFO  com.revature.bankapp.controller.CustomerController  - End

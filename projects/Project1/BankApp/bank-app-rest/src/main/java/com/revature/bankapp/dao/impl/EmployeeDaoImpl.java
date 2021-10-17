@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.revature.bankapp.account.Account;
-import com.revature.bankapp.account.Transactions;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Transactions;
 import com.revature.bankapp.dao.EmployeeDao;
 import com.revature.bankapp.dao.Util;
 import com.revature.bankapp.model.Customer;
@@ -44,7 +44,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			statement.setString(1, Email);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
-				// currentCustomerId = resultSet.getInt("id");
+				 //currentCustomerId = resultSet.getInt("id");
 				String FirstName = resultSet.getString("FirstName");
 				String LastName = resultSet.getString("LastName");
 				String email = resultSet.getString("Email");

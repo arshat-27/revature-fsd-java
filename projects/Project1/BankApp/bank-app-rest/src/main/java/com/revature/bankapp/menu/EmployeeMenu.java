@@ -4,9 +4,9 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
-import com.revature.bankapp.account.Account;
-import com.revature.bankapp.account.Transactions;
-import com.revature.bankapp.account.ViewCustomers;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Transactions;
+import com.revature.bankapp.view.ViewCustomers;
 import com.revature.bankapp.dao.impl.CustomerDaoImpl;
 import com.revature.bankapp.dao.impl.EmployeeDaoImpl;
 import com.revature.bankapp.exception.AppException;

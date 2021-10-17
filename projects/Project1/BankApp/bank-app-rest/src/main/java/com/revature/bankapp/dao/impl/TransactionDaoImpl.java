@@ -7,13 +7,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.revature.bankapp.account.Account;
-import com.revature.bankapp.account.Transactions;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Transactions;
 import com.revature.bankapp.dao.TransactionDao;
 import com.revature.bankapp.dao.Util;
+import com.revature.bankapp.exception.AppException;
 
 public class TransactionDaoImpl implements TransactionDao {
-	//AccountDaoImpl accdao = new AccountDaoImpl();
+	
 
 	public void insert(Transactions transaction) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
@@ -59,4 +60,27 @@ public class TransactionDaoImpl implements TransactionDao {
 
 		return transactionList;
 	}
+
+	public long showBalance(long accountId) throws AppException {
+		long balanceReturned = 0;
+		try (Connection connection = Util.getConnection()) {
+
+			String sql = "select balance from account where id = ?";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1,(int)accountId);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) {
+				balanceReturned = (long) rs.getInt("balance");
+			}
+
+		}
+		catch (SQLException e) {
+//			LOGGER.error("Getting Customer Details",e);
+			throw new AppException(e);
+		}
+		return balanceReturned;
+
+	}
+	
 }

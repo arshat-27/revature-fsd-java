@@ -3,9 +3,9 @@ package com.revature.bankapp.menu;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.revature.bankapp.account.ViewAccount;
-import com.revature.bankapp.account.ViewTransaction;
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
+import com.revature.bankapp.view.ViewAccount;
+import com.revature.bankapp.view.ViewTransaction;
 
 public class TransactionMenu extends Menu{
 	
