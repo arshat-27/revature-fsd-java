@@ -50,6 +50,7 @@ public class AccountDaoImpl implements AccountDao {
 				Account account = new Account();
 				account.setAccountNumber(resultSet.getString("accountno"));
 				account.setBalance(resultSet.getDouble("balance"));
+				account.setId(resultSet.getInt("id"));
 				accountList.add(account);
 
 			}
@@ -59,23 +60,13 @@ public class AccountDaoImpl implements AccountDao {
 
 	}
 
-	public static void insertTransfer(Transactions transaction) throws SQLException {
-		try (Connection connection = Util.getConnection()) {
-			String sql = "insert into transaction (type, amount, accountid) values (?, ?, ?)";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, String.valueOf(transaction.getType()));
-			statement.setDouble(2, transaction.getAmount());
-			statement.setInt(3, transferAccountId);
-			statement.executeUpdate();
-		}
-	}
-
-	public  Account currentAccount() throws SQLException {
+	
+	public  Account currentAccount(String accno) throws SQLException {
 		Account account = null;
 		try (Connection connection = Util.getConnection()) {
 			String sql = "select * from account where accountno = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, TransactionMenu.accNumber);
+			statement.setString(1, accno);
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentAccountId = resultSet.getInt("id");
@@ -88,31 +79,52 @@ public class AccountDaoImpl implements AccountDao {
 		return account;
 	}
 
-	public static void updateTransfer(Account account) throws SQLException {
+	
+
+	public void insert(Transactions transaction) throws SQLException {
+		try (Connection connection = Util.getConnection()) {
+			String sql = "insert into transaction (type, amount, accountid) values (?, ?, ?)";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, String.valueOf(transaction.getType()));
+			statement.setDouble(2, transaction.getAmount());
+			statement.setInt(3, AccountDaoImpl.currentAccountId);
+			statement.executeUpdate();
+
+		}
+
+	}
+
+	public void update(Account account) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
 			String sql = "update account set balance = ? where id = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
 			statement.setDouble(1, account.getBalance());
-			statement.setInt(2, transferAccountId);
+			statement.setInt(2, AccountDaoImpl.currentAccountId);
 			statement.executeUpdate();
 		}
+
 	}
 
-	public Account transferAccount() throws SQLException {
-		Account account = null;
+	public static List<Transactions> transactionList(int id ) throws SQLException {
+		List<Transactions> transactionList = new ArrayList<>();
 		try (Connection connection = Util.getConnection()) {
-			String sql = "select * from account where accountno = ?";
+			String sql = "select * from transaction where accountid = ?";
 			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, TransactionMenu.transferAccNum);
+			statement.setInt(1,id);
+			
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
-				transferAccountId = resultSet.getInt("id");
-				String accNumber = resultSet.getString("accountno");
-				Double balance = resultSet.getDouble("balance");
+				Transactions t = new Transactions();
+				t.setType(resultSet.getString("type").charAt(0));
+				t.setAmount(resultSet.getDouble("amount"));
+				t.setAccountId(resultSet.getInt("accountId"));
+				transactionList.add(t);
+				
+				
 
-				account = new Account(accNumber, balance);
 			}
 		}
-		return account;
+
+		return transactionList;
 	}
 }

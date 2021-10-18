@@ -6,37 +6,50 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <title>Bankapp.Home</title>
+
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css"> -->
+
+
+
+
   <link rel="stylesheet" href="styles/css.css">
+  <link rel="stylesheet" href="styles/footer.css">
 
-  
-    <style>
-        .cls {
-            background-image: url("imges/b18.jpg");
 
-            height: 600px;
-            background-position: right;
-            background-repeat: no-repeat; 
-            background-size:  cover;
+  <style>
+    .cls {
+      background-image: url("imges/b18.jpg");
 
-        }
-    </style>
+      height: 600px;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+  </style>
 </head>
 
 <body>
 
 
 
-  <!-- <a href="Home.html">Home</a>
-      <a href="Signup.html">SignUp</a>
-      <a href="CustomerLogin.html">CustomerLogin</a>
-      <a href="EmployeeLogin.html">EmployeeLogin</a>     -->
+
 
 
   <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
     <a class="navbar-brand" href="#">
       <img src="imges/B77.png" height="40" width="60">
       <!-- <span class="badge badge-danger">BOS</span> -->
-  </a>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,7 +86,9 @@
   </nav>
   <div class="cls">
 
-    <div class="mt"><h1>***Bank Of Arshat***</h1></div>
+    <div class="mt">
+      <h1>***Bank Of Arshat***</h1>
+    </div>
 
 
     <h2>GET YOUR SAVINGS ACCOUNT IN FEW MINUTES...!!!</h2>
@@ -81,74 +96,110 @@
 
 
 
-  <div class="slideshow-container">
+    <div class="slideshow-container">
 
-    <!-- Full-width slides/quotes -->
-    <div class="mySlides">
-      <q>Love the service of the BOA</q>
-      <p class="author">- Sahith</p>
+      <!-- Full-width slides/quotes -->
+      <div class="mySlides">
+        <q>Love the service of the BOA</q>
+        <p class="author">- Sahith</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Friendly Staff</q>
+        <p class="author">- Sibghat</p>
+      </div>
+
+      <div class="mySlides">
+        <q>Quick services from Home</q>
+        <p class="author">-Thallam</p>
+      </div>
+
+      <!-- Next/prev buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+      <!-- Dots/bullets/indicators -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
 
-    <div class="mySlides">
-      <q>Friendly Staff</q>
-      <p class="author">- Sibghat</p>
-    </div>
 
-    <div class="mySlides">
-      <q>Quick services from Home</q>
-      <p class="author">-Thallam</p>
-    </div>
-
-    <!-- Next/prev buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-
-  <!-- Dots/bullets/indicators -->
-  <div class="dot-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
+    <!-- <body>
+  <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Web design</a></li>
+                          <li><a href="#">Development</a></li>
+                          <li><a href="#">Hosting</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Careers</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 item text">
+                      <h3>Company Name</h3>
+                      <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                  </div>
+                  <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+              </div>
+              <p class="copyright">Company Name © 2018</p>
+          </div>
+      </footer>
   </div>
-</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> -->
 
 
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script><br><br>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-crossorigin="anonymous"></script>
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script><br><br>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"></script>
 
 
 

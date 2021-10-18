@@ -1,20 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
-const currentAccNum = urlParams.get('id');
+const currentAccountId = urlParams.get('id');
 
-let withdrawBtn = document.getElementById("withdraw");
+
 let amountEntered = document.getElementById("amount");
 
+let depositBtn = document.getElementById("deposit");
 
-let amountError = document.getElementById("amountError");
-let successMessage = document.getElementById("success");
-let errorMessage = document.getElementById("error");
-
-successMessage.style.display = "none";
-errorMessage.style.display = "none";
-
-
-
-withdrawBtn.addEventListener("click", function () {
+depositBtn.addEventListener("click", function () {
     amountEnteredValid = true;
     if (amountEntered.value == "") {
         amountError.innerText = "Amount is manadatory";
@@ -30,7 +22,7 @@ withdrawBtn.addEventListener("click", function () {
     }
     if (amountEnteredValid == true) {
         console.log("Clicked");
-        withdraw();
+        deposit();
     }
 });
 
@@ -41,23 +33,27 @@ amountEntered.addEventListener("keyup", function () {
 });
 
 
-async function withdraw() {
-    let withdrawDetails = {
-        accountNumber: currentAccNum,
+
+
+
+
+async function deposit() {
+    let depositDetails = {
+        accountNumber: currentAccountId,
         balance: amountEntered.value
     };
 
     var options = {
         method: 'PUT',
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(withdrawDetails)
+        body: JSON.stringify(depositDetails)
     };
     try {
-        let response = await fetch("http://localhost:8080/bank-app-rest/transactions/withdraw", options);
+        let response = await fetch("http://localhost:8080/bank-app-rest/transactions/deposit", options);
 
         if (response.status == 200){
+            clearData()
             alert("Successfull");
-            clearData();
             document.location="Accounts.html";
         }
 
@@ -66,6 +62,7 @@ async function withdraw() {
 
     }
 }
+
 
 function clearData(){
     amountEntered.value = " ";

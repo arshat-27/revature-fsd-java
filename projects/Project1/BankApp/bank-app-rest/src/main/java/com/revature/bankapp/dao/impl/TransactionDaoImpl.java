@@ -52,6 +52,7 @@ public class TransactionDaoImpl implements TransactionDao {
 				Transactions t = new Transactions();
 				t.setType(resultSet.getString("type").charAt(0));
 				t.setAmount(resultSet.getDouble("amount"));
+				t.setAccountId(resultSet.getInt("accountId"));
 				transactionList.add(t);
 				
 

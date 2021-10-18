@@ -126,21 +126,7 @@ public class Account {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	public void transfer(double amount) {
-		balance += amount;
-		try {
-			AccountDaoImpl.insertTransfer(new Transactions('C', amount));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			AccountDaoImpl.updateTransfer(this);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	
 	
 
 	}
