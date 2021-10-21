@@ -63,18 +63,18 @@ public class EmployeeMenu extends Menu {
 			ViewCustomers.customerList();
 			displayMenuAndCaptureSelection();
 			
-		case 3:
-			try {
-				List<Account> list = EmployeeDaoImpl.eViewAccount();
-				for(int i =0; i <list.size(); i++) {
-					System.out.println((i+1) + ") " + list.get(i));
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			displayMenuAndCaptureSelection();
-			break;
+//		case 3:
+//			try {
+//				List<Account> list = EmployeeDaoImpl.eViewAccount();
+//				for(int i =0; i <list.size(); i++) {
+//					System.out.println((i+1) + ") " + list.get(i));
+//				}
+//			} catch (SQLException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			displayMenuAndCaptureSelection();
+//			break;
 		case 4:
 			try {
 				List<Transactions> list = EmployeeDaoImpl.eViewTransaction();

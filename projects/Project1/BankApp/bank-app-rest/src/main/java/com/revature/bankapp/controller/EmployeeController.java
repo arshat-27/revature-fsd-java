@@ -65,4 +65,25 @@ public class EmployeeController {
 
 	}
 	
+	@GET
+	@Path("/accounts/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response get(@PathParam("id") int id) {
+		try {
+			List<Customer> viewCustomer;
+			 EmployeeDaoImpl empl = new EmployeeDaoImpl();
+			 viewCustomer = empl.eViewAccount(id);
+			
+			System.out.println(viewCustomer);
+			return Response
+					.ok()
+					.entity(viewCustomer)
+					.build();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return Response.status(500).build();
+		}
+
+	}
+	
 }
